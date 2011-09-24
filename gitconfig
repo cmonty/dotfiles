@@ -10,5 +10,5 @@
 [core]
   excludesfile = ~/.gitignore
 [user]
-	name = Drew Olson
-	email = drew@drewolson.org
+	name = Cory Monty
+	email = cory.monty@gmail.com
