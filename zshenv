@@ -65,3 +65,5 @@ if [ -f `brew --prefix rbenv`/completions/rbenv.zsh ]; then
   source `brew --prefix rbenv`/completions/rbenv.zsh
   compdef _rbenv rbenv
 fi
+
+source ~/.zshenv_personal
