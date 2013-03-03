@@ -48,5 +48,3 @@ fi
 
 source ~/.zshenv_personal
 # [[ -s "/Users/cory/.rvm/scripts/rvm" ]] && source "/Users/cory/.rvm/scripts/rvm"
-
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
