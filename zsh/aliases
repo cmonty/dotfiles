@@ -1,0 +1,4 @@
+alias rc='rake_commit'
+alias ll='ls -la'
+alias ss='./script/server'
+alias sc='./script/console'

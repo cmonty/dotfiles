@@ -1,0 +1,48 @@
+autoload -U compinit
+compinit
+autoload -U colors
+colors
+
+#path
+export PATH=$HOME/.bin/:/usr/local/bin:$HOME/.rbenv/bin:$PATH
+
+#env vars
+export BROWSER=google-chrome
+export CLICOLOR=1
+export EDITOR=vim
+export GREP_OPTIONS='--color=auto'
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export TERM=screen-256color
+
+#completion
+autoload edit-command-line
+zle -N edit-command-line
+bindkey '^Xe' edit-command-line
+
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case insensitive completion
+
+#options
+set -o emacs
+setopt NO_AUTO_MENU
+setopt PROMPT_SUBST
+setopt EXTENDED_HISTORY
+setopt COMPLETE_IN_WORD
+setopt HIST_IGNORE_DUPS
+setopt AUTO_CD
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+
+#ec2
+if [ -f ~/bt/system-scripts/pairing_stations/ec2env ]; then
+  export SYSTEM_SCRIPTS=~/bt/system-scripts
+  source ~/bt/system-scripts/pairing_stations/ec2env
+fi
+
+#cd path
+export CDPATH=.:~
+
+#boxen
+[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
