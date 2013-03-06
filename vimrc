@@ -29,7 +29,7 @@ autocmd ColorScheme * highlight LineLengthError ctermbg=black guibg=black
 highlight Pmenu ctermfg=black ctermbg=gray
 highlight PmenuSel ctermfg=black ctermbg=white
 
-" Optins
+" Options
 compiler ruby
 
 syntax on
@@ -69,6 +69,7 @@ set ignorecase
 set smartcase
 set showmatch
 set incsearch
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Soft/hard wrapping
 set wrap
@@ -135,11 +136,6 @@ let coffee_no_trailing_space_error = 1
 
 let NERDTreeIgnore=['\.pyc']
 
-" " CommandT
-let g:CommandTMaxHeight = 15
-let g:CommandTMatchWindowAtTop = 1
-let g:CommandTCancelMap='<Esc>'
-
 " Navigation Shortcuts
 " Easier split navigation
 noremap <C-h> <C-w>h
@@ -152,7 +148,7 @@ map <leader>aa :A<CR>
 map <leader>as :AS<CR>
 map <leader>av :AV<CR>
 
-" " CommandT
+" " CommandP
 map <leader>ff :CtrlP<Enter>
 map <leader>fb :CtrlPBuffer<Enter>
 map <leader>fr :CtrlPClearAllCaches<Enter>
@@ -196,11 +192,6 @@ vmap <LocalLeader>vs "vy :call RunVimTmuxCommand(@v . "\n", 0)<CR>
 map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
-
-" CommandT
-map <silent> <leader>ff :CommandT<CR>
-map <silent> <leader>fb :CommandTBuffer<CR>
-map <silent> <leader>fr :CommandTFlush<CR>
 
 map <silent> <LocalLeader>gd :e product_diff.diff<CR>:%!git diff<CR>:setlocal buftype=nowrite<CR>
 map <silent> <LocalLeader>pd :e product_diff.diff<CR>:%!svn diff<CR>:setlocal buftype=nowrite<CR>

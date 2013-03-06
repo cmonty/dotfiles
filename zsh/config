@@ -19,15 +19,8 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey '^Xe' edit-command-line
 
-if [ -f ~/.ssh/config ]; then
-  hosts=($hosts `grep ^Host ~/.ssh/config | sed s/Host\ // | egrep -v ‘^\*$’`)
-fi
-
 zstyle ':completion::complete:*' use-cache on
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # case insensitive completion
-if [ "$hosts" ]; then
-  zstyle ‘:completion:*:hosts’ hosts $hosts
-fi
 
 #options
 set -o emacs
