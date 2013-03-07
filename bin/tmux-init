@@ -1,0 +1,16 @@
+#!/bin/bash
+session=$(basename $PWD)
+
+if [ -z $TMUX ]; then
+  tmux new-session -s $session \; rename-window "term" \; new-window -n "code"
+else
+  tmux rename-session $session
+  tmux set -t $session default-path $PWD
+  tmux rename-window -t $session:0 "term"
+
+  if [ $(tmux list-windows -t $session | wc -l) -gt 1 ]; then
+    tmux rename-window -t $session:1 "code"
+  else
+    tmux new-window -t $session:1 -n "code"
+  fi
+fi
