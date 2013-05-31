@@ -7,7 +7,7 @@ if &shell == "/usr/bin/sudosh"
 endif
 
 " Use pathogen to load bundles
-call pathogen#incudbate()
+call pathogen#incubate()
 call pathogen#helptags()
 
 filetype plugin indent on
