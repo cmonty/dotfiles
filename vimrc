@@ -175,7 +175,10 @@ map <silent> <LocalLeader>uc :TComment<CR>
 map <Leader>vp :PromptVimTmuxCommand<CR>
 
 " " Run last command executed by RunVimTmuxCommand
-map <Leader>rl :RunLastVimTmuxCommand<CR>
+map <Leader>rl :VimuxRunLastCommand<CR>
+map <Leader>rf :RunRubyFocusedTest<CR>
+map <Leader>rb :RunAllRubyTests<CR>
+map <Leader>rc :RunRubyFocusedContext<CR>
 
 " " Inspect runner pane
 map <Leader>vi :InspectVimTmuxRunner<CR>
