@@ -171,6 +171,9 @@ map <silent> <LocalLeader>rt :!ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg
 map <leader>cc :TComment<CR>
 map <silent> <LocalLeader>uc :TComment<CR>
 
+map <leader>rf :RunRubyFocusedTest<CR>
+map <leader>rb :RunAllRubyTests<CR>
+
 " " Prompt for a command to run
 map <Leader>vp :PromptVimTmuxCommand<CR>
 

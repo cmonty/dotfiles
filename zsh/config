@@ -35,14 +35,5 @@ setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 
-#ec2
-if [ -f ~/bt/system-scripts/pairing_stations/ec2env ]; then
-  export SYSTEM_SCRIPTS=~/bt/system-scripts
-  source ~/bt/system-scripts/pairing_stations/ec2env
-fi
-
 #cd path
 export CDPATH=.:~
-
-#boxen
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh
